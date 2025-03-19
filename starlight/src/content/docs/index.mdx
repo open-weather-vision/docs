@@ -1,0 +1,37 @@
+---
+title: Build your own weather control center
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+    tagline: Archive, analyze and share your weather data - for free!
+    image:
+        file: ../../assets/logo.svg
+    actions:
+        - text: Starter Guide
+          link: /user-guides/starter/
+          icon: right-arrow
+        - text: Join our discord server
+          link: https://discord.gg/YxVmbrYy
+          icon: external
+          variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid stagger>
+    <Card title="Community driven" icon="heart">
+        Built by passionate developers that just love watching the weather.
+    </Card>
+    <Card title="Self hostable" icon="seti:xml">
+        Host it on a raspberry pi and connect it with your station - no third
+        parties involved!
+    </Card>
+    <Card title="Highly configurable" icon="setting">
+        Install plugins and custom themes to push your weather control center
+        beyond your limits.
+    </Card>
+    <Card title="Well documented" icon="open-book">
+        We know that setting up a new tool can be a headache. A good
+        documentation can save you a lot of time.
+    </Card>
+</CardGrid>
