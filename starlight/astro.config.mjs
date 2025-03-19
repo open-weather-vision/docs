@@ -39,6 +39,14 @@ export default defineConfig({
                     ],
                 },
                 {
+                    label: "Plugins",
+                    autogenerate: { directory: "plugins" },
+                },
+                {
+                    label: "CLI",
+                    autogenerate: { directory: "cli" },
+                },
+                {
                     label: "Reference",
                     autogenerate: { directory: "reference" },
                 },
