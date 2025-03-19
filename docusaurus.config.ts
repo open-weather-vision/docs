@@ -4,16 +4,19 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const organizationName = "open-weather-vision";
+const projectName = "owvision";
+
 const config: Config = {
     title: "open weather vision",
     tagline: "Create your own weather control center!",
     favicon: "img/favicon.ico",
 
     // Set the production url of your site here
-    url: "https://your-docusaurus-site.example.com",
+    url: `https://${organizationName}.github.io`,
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: "/",
+    baseUrl: `/${projectName}/`,
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
@@ -64,7 +67,7 @@ const config: Config = {
         navbar: {
             title: "owvision",
             logo: {
-                alt: "My Site Logo",
+                alt: "Logo",
                 src: "img/logo-2.svg",
             },
             items: [
