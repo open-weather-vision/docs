@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const organizationName = "open-weather-vision";
-const projectName = "owvision";
+const projectName = "docs";
 
 const config: Config = {
     title: "open weather vision",

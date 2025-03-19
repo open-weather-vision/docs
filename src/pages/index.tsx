@@ -20,7 +20,7 @@ function HomepageHeader() {
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
-                        to="/owvision/docs/users/intro"
+                        to="/docs/docs/users/intro"
                     >
                         Starter Guide
                     </Link>
