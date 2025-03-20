@@ -1,4 +1,4 @@
 ---
-title: Developing a custom theme
+title: Developing Custom Themes
 description: A guide for developers
 ---

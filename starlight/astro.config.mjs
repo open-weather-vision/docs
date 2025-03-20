@@ -12,39 +12,19 @@ export default defineConfig({
             social: {
                 github: "https://github.com/open-weather-vision/core",
             },
+            customCss: ["./src/custom.css"],
             sidebar: [
                 {
                     label: "User Guides",
-                    items: [
-                        // Each item here is one entry in the navigation menu.
-                        { label: "Starter Guide", slug: "user-guides/starter" },
-                    ],
+                    autogenerate: { directory: "user-guides" },
                 },
                 {
                     label: "Developer Guides",
-                    items: [
-                        // Each item here is one entry in the navigation menu.
-                        {
-                            label: "Station interfaces",
-                            slug: "developer-guides/station-interface",
-                        },
-                        {
-                            label: "Plugins",
-                            slug: "developer-guides/plugin",
-                        },
-                        {
-                            label: "Themes",
-                            slug: "developer-guides/theme",
-                        },
-                    ],
+                    autogenerate: { directory: "developer-guides" },
                 },
                 {
                     label: "Plugins",
                     autogenerate: { directory: "plugins" },
-                },
-                {
-                    label: "CLI",
-                    autogenerate: { directory: "cli" },
                 },
                 {
                     label: "Reference",

@@ -1,4 +1,4 @@
 ---
-title: Developing a plugin
+title: Developing Plugins
 description: A guide for developers
 ---

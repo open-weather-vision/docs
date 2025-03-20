@@ -1,6 +1,6 @@
 ---
-title: Supported weather station models
-description: A reference page in my new Starlight docs site.
+title: Supported Weather Stations
+description: A list of all support weather station models
 ---
 
 Following weather station models are officially supported or recommended by open weather vision:
