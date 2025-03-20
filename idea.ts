@@ -83,6 +83,8 @@ class StationPluginContext extends GlobalPluginContext {
     > {
         return [];
     }
+
+    refreshPage(slug: string): void {}
 }
 
 type PluginOptions<
@@ -100,12 +102,12 @@ type PluginOptions<
         name: { [Property in string]: string } | string;
         icon: string;
         template: string;
-        dependencies: (
+        updateTriggers: (
             | keyof S
             | "stationName"
             | "sensors"
-            | `sensor#${string}`
             | "stationLocation"
+            | `every ${number}${"w" | "d" | "h" | "min" | "s"}`
         )[];
     }[];
 
@@ -123,9 +125,12 @@ type PluginOptions<
 class PluginCreator {
     static create<C extends PluginStateDefinition, T extends PluginContextType>(
         options: PluginOptions<C, T>
-    ) {}
+    ) {
+        return options;
+    }
 }
-const plugin = PluginCreator.create({
+
+PluginCreator.create({
     name: "DWD Rain Radar",
     version: "1.0.0",
     context: "station",
@@ -144,7 +149,12 @@ const plugin = PluginCreator.create({
             icon: "img/icon.svg",
             slug: "rain-radar",
             template: "pages/rain-radar.vash",
-            dependencies: ["apiKey", "stationLocation", "stationName"],
+            updateTriggers: [
+                "apiKey",
+                "stationLocation",
+                "stationName",
+                "every 5s",
+            ],
         },
     ],
 
